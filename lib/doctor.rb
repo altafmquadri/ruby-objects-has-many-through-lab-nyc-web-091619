@@ -20,9 +20,9 @@ class Doctor
     end
 
     def patients
-        Patient.all.select {|patient| patient}
-        # I would expect the bottom to work, not the top
-        #appointments.select { |appointment| appointment.patient}
+        # Patient.all.select {|patient| patient}
+        # # I would expect the bottom to work, not the top
+        appointments.map { |appointment| appointment.patient}
     end
 
     def self.all
