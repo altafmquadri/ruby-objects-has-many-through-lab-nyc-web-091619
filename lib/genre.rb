@@ -2,8 +2,7 @@ require 'pry'
 
 class Genre
     attr_accessor :name
-    attr_reader
-
+    
     @@all =[]
 
     def initialize(name)
@@ -16,7 +15,7 @@ class Genre
     end
 
     def artists
-        Artist.all.select {|artist|artist}
+        Artist.all.select {|artist|artist; binding.pry}
     end
 
     def self.all
